@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        #dropzone {
+            width: 60%;
+            height: 60%;
+            border: 2px dashed #009688;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: absolute; /* Ensure dropzone is above the canvas */
+            z-index: 10; /* Higher z-index to be on top */
+        }
+        #file-input {
+            display: none;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div id="dropzone">Drop GLB files here or click to upload</div>
+    <input type="file" id="file-input" accept=".glb"/>
+    <div id="loading-bar-container">
+        <div id="loading-bar"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.0"></script>
+
+</body>
+</html>
